@@ -24,6 +24,7 @@ class Vehicle:
 
     def set_color(self, new_color):
         self._color = new_color
+        new_color = new_color.lower()
         if new_color in Vehicle._COLOR_VARIANTS:
             self._color = new_color
         else:
@@ -39,7 +40,7 @@ class Sedan(Vehicle):
 
 car = Sedan('Bob', 'Volvo', 150, 'blue')
 car.print_info()
-car.set_color('white')
-car.set_color('pink')
+car.set_color('WHITE')
+car.set_color('PINK')
 car.owner = "Nick"
 car.print_info()
